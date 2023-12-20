@@ -68,8 +68,9 @@
 		margin: 0 auto;
 		margin-bottom: 100px;
 		gap: 5px;
-		max-width: 1300px;
-		padding: 0 10px 0px 50px;
+		max-width: 1440px;
+		padding-right: 50px;
+		padding-top: 0;
 
 		&__background-shape {
 			top: 30%;
@@ -81,7 +82,7 @@
 			margin-top: 60px;
 			max-width: 600px;
 			align-items: flex-start;
-			padding-left: 50px;
+			padding-left: 110px;
 		}
 
 		&__title {
