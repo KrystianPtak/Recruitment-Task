@@ -1,0 +1,42 @@
+$primaryLightBlue: hsl(231, 69%, 60%);
+$primaryLightRed: hsl(0, 94%, 66%);
+$grayish: hsl(229, 8%, 60%);
+$darkBlue: hsl(229, 31%, 21%);
+$white: #fff;
+
+@mixin flexCenter($direction) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin button {
+	padding: 15px 30px;
+	background-color: $primaryLightBlue;
+	border-radius: 5px;
+	box-shadow: -0px 4px 6px 1px rgba(0, 0, 0, 0.123);
+	color: $white;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+@mixin title {
+	font-size: 25px;
+	color: $darkBlue;
+	text-align: center;
+	line-height: 1.5;
+	letter-spacing: 1px;
+}
+
+@mixin text {
+	color: $grayish;
+	text-align: center;
+	line-height: 1.7;
+	font-size: 16px;
+	max-width: 550px;
+}
+
+@mixin largeFont {
+	font-size: 30px;
+}

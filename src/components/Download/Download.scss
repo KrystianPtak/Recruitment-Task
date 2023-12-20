@@ -1,0 +1,111 @@
+@import "../../global.scss";
+.download {
+	@include flexCenter(column);
+	margin-top: 120px;
+
+	&__title {
+		@include title;
+		margin-bottom: 12px;
+	}
+
+	&__text {
+		@include text;
+		margin-bottom: 80px;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+		margin-bottom: 80px;
+	}
+
+	&__box {
+		@include flexCenter(column);
+		box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.253);
+		height: 380px;
+	}
+
+	&__box-img {
+		margin-bottom: 40px;
+	}
+
+	&__box-title {
+		margin-bottom: 15px;
+		color: $darkBlue;
+	}
+
+	&__box-text {
+		@include text;
+		margin-bottom: 40px;
+	}
+
+	&__box-dots {
+		margin-bottom: 25px;
+	}
+
+	&__box-button {
+		@include button;
+		outline: 2px solid transparent;
+		font-weight: 500;
+	}
+}
+
+@media (min-width: 1200px) {
+	.download {
+		padding-bottom: 20px;
+
+		&__container {
+			flex-direction: row;
+		}
+
+		&__box {
+			height: 350px;
+		}
+
+		&__title {
+			@include largeFont;
+			margin-bottom: 20px;
+		}
+
+		&__text {
+			font-size: 18px;
+		}
+
+		&__box-img {
+			margin-bottom: 30px;
+		}
+
+		&__box-title {
+			margin-bottom: 10px;
+			font-size: 18px;
+		}
+
+		&__box-text {
+			margin-bottom: 30px;
+		}
+
+		&__box-dots {
+			margin-bottom: 20px;
+		}
+
+		&__box:nth-child(2) {
+			margin-top: 40px;
+		}
+
+		&__box:nth-child(3) {
+			margin-top: 80px;
+		}
+
+		&__box-button {
+			transition: background-color 0.3s ease, color 0.3s ease,
+				outline-color 0.3s ease;
+
+			&:hover {
+				background-color: inherit;
+				color: $primaryLightBlue;
+				outline-color: $primaryLightBlue;
+			}
+		}
+	}
+}

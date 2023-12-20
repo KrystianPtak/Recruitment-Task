@@ -1,0 +1,103 @@
+@import "../../global.scss";
+
+.accordion {
+	@include flexCenter(column);
+	gap: 50px;
+
+	&__title {
+		@include title;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		@include text;
+		margin-bottom: 60px;
+		max-width: 500px;
+	}
+
+	&__item {
+		margin-bottom: 10px;
+		max-width: 700px;
+		overflow: hidden;
+		border-bottom: 1px solid rgba(128, 128, 128, 0.322);
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+		cursor: pointer;
+	}
+
+	&__question {
+		font-weight: 500;
+		font-size: 15px;
+		color: #444;
+	}
+
+	&__icon {
+		transition: transform 0.3s ease, fill 0.3s ease;
+	}
+
+	&__icon-active {
+		path {
+			stroke: $primaryLightRed;
+		}
+		transform: rotate(180deg);
+	}
+
+	&__answer {
+		max-width: 500px;
+		padding: 20px 0 40px;
+		color: rgb(112, 107, 107);
+		line-height: 1.7;
+	}
+
+	&__button {
+		@include button;
+		margin-bottom: 120px;
+		color: $white;
+	}
+}
+
+@media (min-width: 1200px) {
+	.accordion {
+		padding: 50px 0;
+
+		&__questions {
+			flex-direction: column;
+		}
+
+		&__icon {
+			margin-right: 10px;
+		}
+
+		&__title {
+			@include largeFont;
+		}
+
+		&__text {
+			font-size: 18px;
+		}
+
+		&__item {
+			&:first-child {
+				border-top: 1px solid rgba(128, 128, 128, 0.322);
+			}
+		}
+
+		&__box {
+			padding: 15px 0;
+
+			&:hover .accordion__question {
+				color: $primaryLightRed;
+			}
+		}
+
+		&__question {
+			font-size: 18px;
+			transition: color 0.3s ease;
+		}
+	}
+}
